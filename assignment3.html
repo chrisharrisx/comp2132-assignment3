@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3</title>
+  <!-- add a link to your index.js file HERE -->
+</head>
+<body>
+  <!-- 
+
+    PART 1
+
+    Inside the assignment3.zip folder you should find this file (assignment3.html) and a folder of images. The folder contains 9 images, 3 of which are fruits (apple, banana, orange), 3 of which are grains (buckwheat, rice, wheat), and 3 of which are vegetables (bok choy, carrots, cauliflower)
+
+    1.  Begin by creating an array of nine object literals. Each object in the array must have two properties: src, and type
+          e.g.  { src: '', type: '' }
+
+        Fill the src properties of the objects with the paths to the images, one path per object
+          e.g.  { src: 'images/apple.jpeg', type: '' }
+        
+        Next, fill the type properties of the objects as appropriate with the types given above, one type per object
+          e.g.  { src: 'images/apple.jpeg', type: 'fruit' }
+        
+        Store this array in a variable named 'data' such that once finished your code should look something like the following:
+
+        const data = [
+          { src: 'images/apple.jpeg', type: 'fruit' },
+          ...fill in the rest of the objects here
+        ]
+
+
+    2.  Create a function named renderImage that accepts a single argument called 'obj'. Inside the function 
+        add the following functionality:
+        
+        a.  create a string representation of an HTML img element using the path parameter
+              e.g. const element = `<img src="${obj.src}">`
+
+              in addition to the above, add a data attribute to the element, named data-type and populate it with 
+              the object's type value
+
+        b.  concatenate the string from step a to the .innerHTML of the element with class "images"
+
+
+    3.  Next, use a for-of loop to step through the 'data' array you created in step 1. 
+
+        Inside the loop, call your renderImage function, passing the current value as an argument 
+        (to populate the 'obj' parameter). Make sure to pass the entire object to the function!
+
+
+    4.  Verify that once the loop has finished running, you can see all nine images in the browser and they have 
+        been inserted correctly into the .images div (check the elements tab of the developer tools). Ensure that each element 
+        has the correct set of attributes:
+          e.g. <img src="apple.jpg" data-type="fruit">
+
+
+    PART 2
+
+
+    5.  Now that you have verified your image paths are correct and images are displaying, fetch all the 
+        image elements on the page via any suitable method (.querySelectorAll, .getElementsByTagName) 
+        and store the results in a variable
+
+
+    6.  Use the .map or .forEach array method to step through the array of elements you stored in step 4. For each element in the array, 
+        read the type from the .dataset.type property
+
+        If the type is grain, add a 10px solid red border to the element, e.g. elem.style.border = '10px solid red' (where 'elem' is
+        the actual name of the variable defined in your .map or .forEach function)
+
+
+    7. Verify in the browser that each of the three images of grains now has a red border around them
+
+  -->
+  <div class="images"></div>
+</body>
+</html>
